@@ -1,0 +1,9 @@
+1. throttling for all classes and apps 
+  1. import throttle classes in views page
+  2. add the throttle time in settings.py [it is uesd under line number 114]
+
+
+2.  throttling for all, specificly and apps [ custom throttle]:
+  1. at first create and throttling.py file,inside that import throttling class and make a "scope"
+  2. add the throttle time in settings.py [it is uesd under line number 114]
+  3. add modified throttle class in throttle_classes in views.py file.

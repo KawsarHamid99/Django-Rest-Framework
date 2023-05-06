@@ -19,9 +19,10 @@ class StudentSerializer(serializers.ModelSerializer):
         fields=["name","roll","city"]
         #read_only_fileds=["name",'roll']
         #extra_kwargs={'name':{'read_only':True}}
+        #exclude=['roll'] #it will exclude the roll
     
 
-
+ 
     #Field Lavel Validation
     def validate_roll(self,value):
         if value>=200:
@@ -36,4 +37,6 @@ class StudentSerializer(serializers.ModelSerializer):
         if nm.lower()=="rawsar" and ct.lower() != "kulna":
             raise serializers.ValidationError("City must be khulna")
         return data
+
+
 

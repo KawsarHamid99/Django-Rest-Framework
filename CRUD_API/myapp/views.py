@@ -24,7 +24,7 @@ def student_api(request):
             serializer=StudentSerializers(stu)
             json_data=JSONRenderer().render(serializer.data)
             return HttpResponse(json_data,content_type='application/json')
-        stu=Student.objects.all()
+        stu=Student.objects.all()   
         serializer=StudentSerializers(stu,many=True)
         json_data=JSONRenderer().render(serializer.data)
         return HttpResponse(json_data,content_type='application/json')
