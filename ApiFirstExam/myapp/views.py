@@ -17,7 +17,7 @@ class StudentApi(View):
         data=request.body
         stream=io.BytesIO(data)
         pythondata=JSONParser().parse(stream)
-        id=pythondata.get('id',None)
+        id= .get('id',None)
 
         if id is not None:
             stu=Student.objects.get(id=id)
