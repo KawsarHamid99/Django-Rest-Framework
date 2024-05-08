@@ -8,17 +8,19 @@ def get_data(id=None):
     if id:
         data={'id':id}
     json_data=json.dumps(data)
-    r=requests.get(url=URL,data=json_data)
+    headers={'content-type':'application/json'}
+    r=requests.get(url=URL,headers=headers,data=json_data)
     data=r.json()
     print(r)
     print(data)
-get_data()
+
 
 
 
 def post_data():
-    data={'name':"kabila","roll":1212,"city":"Khulna"}
+    data={'name':"bablu","roll":55,"city":"Khulna"}
     json_data=json.dumps(data)
+    headers={'content-type':'application/json'}
 
     r=requests.post(url=URL,data=json_data)
     data=r.json()
@@ -27,14 +29,14 @@ def post_data():
 #post_data()
 
 def put_data():
-    data={'id':4,'name':"bakis","roll":1212,"city":"Khulna"}
+    data={'id':6,'name':"komola","roll":1212,"city":"Khulna"}
     json_data=json.dumps(data)
 
     r=requests.put(url=URL,data=json_data)
     data=r.json()
     print(data)
 
-# put_data()
+#put_data()
 
 
 def delete_data():
@@ -44,4 +46,5 @@ def delete_data():
     data=r.json()
     print(data)
 
-delete_data()
+#delete_data()
+get_data()
