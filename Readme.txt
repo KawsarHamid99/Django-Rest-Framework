@@ -7,6 +7,14 @@
 7.GenericApiView_And_mixin
 8.ConcreteView
 9. Authentication
+	a.BasicAuthentication
+	b.SessionAuthenticationAndPermission
+	c.AuthenticationAndPermissionInFunctionBasedView
+	d.TokenAuthenticaton
+	e.CustomAuthentication
+	
+	
+	
 10.JSON-webTokenAndSimpleJWT 
 11. Throttling
 12. filter and search
